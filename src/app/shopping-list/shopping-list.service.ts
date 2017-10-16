@@ -18,4 +18,10 @@ export class ShoppingListService {
     this.ingredientsChanged.emit();
   }
 
+  addIngredients(ingredients: Ingredient[]) {
+    ingredients.forEach(
+      (ingredient) => this.addIngredient(ingredient)
+    );
+  }
+
 }
