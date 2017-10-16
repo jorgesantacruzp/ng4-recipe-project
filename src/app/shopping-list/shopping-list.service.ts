@@ -19,9 +19,8 @@ export class ShoppingListService {
   }
 
   addIngredients(ingredients: Ingredient[]) {
-    ingredients.forEach(
-      (ingredient) => this.addIngredient(ingredient)
-    );
+    // spread operator (...) converts an array into a list
+    this.ingredients.push(...ingredients);
   }
 
 }
